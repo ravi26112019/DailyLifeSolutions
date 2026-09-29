@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Mobile First Base */
+body {
+  background-color: #232a2e; /* Mobile में यही कलर background रहेगा */
+  color: #ffffff;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* ये wrapper HTML में add कर लेना */
+.app-container {
+  width: 100%;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  aspect-ratio: 1;
+  width: 7.5rem;
+  border-radius: 50%;
+  object-fit: contain;
+  padding: 0.75rem; 
+  margin-bottom: 0.7rem;
+}
+
+h1 {
+  font-size: clamp(1.4rem, 4vw, 1.5rem);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #d0d5dd;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  margin-bottom: 2rem;
+}
+
+.links-container {
+  width: 100%;
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.link-btn {
+  background-color: #ffffff;
+  color: #121212;
+  text-decoration: none;
+  padding: 1rem;
+  border-radius: 0.75rem; 
+  font-weight: 500;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+  width: 100%;
+}
+
+.link-btn:hover {
+  transform: scale(1.015);
+  background-color: #f8f9fa;
+}
+
+/* Desktop View (576px / 36rem & above) */
+@media (min-width: 36rem) {
+  body {
+    background-color: #121517; /* Outer background डार्क हो जाएगा */
+    justify-content: center; /* Card को screen के center में लाने के लिए */
+  }
+
+  .app-container {
+    max-width: 35rem;
+    background-color: #232a2e; /* Original background अब Card का कलर बन जाएगा */
+    border-radius: 1.5rem;
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.4); /* हल्की सी depth */
+    padding: 3rem 2rem;
+    margin: 2rem; /* Card के बाहर थोड़ा breathing space */
+  }
+}
